@@ -33,10 +33,6 @@
     right: -10px;
 }
 
-/* .d-flex {
-    display: flex;
-} */
-
 .page-main__hotel-search {
     padding-top: 35px;
     padding-left: 70px;
@@ -66,15 +62,9 @@
     margin-bottom: 40px;
 }
 
-.hotel-search__nav-item {}
-
-.hotel-search__nav-decor {}
-
 .hotel-search__settings {
     display: flex;
 }
-
-.hotel-search__features {}
 
 .hotel-search__features-list {
     padding: 0;
@@ -82,7 +72,6 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 23px;
-
 }
 
 .hotel-search__feature-item {
@@ -93,6 +82,7 @@
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 input[type='number'],
@@ -101,10 +91,6 @@ input[type="number"]:focus {
     appearance: none;
     -moz-appearance: textfield;
 }
-
-.feature-item__input {}
-
-.feature-item__label {}
 
 .hotel-search__state-type {
     margin-left: 70px;
@@ -120,10 +106,6 @@ input[type="number"]:focus {
     display: flex;
     column-gap: 14px;
 }
-
-.type-item__input {}
-
-.type-item__label {}
 
 .hotel-search__price {
     width: 288px;
@@ -159,10 +141,6 @@ input[type="number"]:focus {
     right: 12px;
     transform: translate(0, 55%);
 }
-
-.input-min-price {}
-
-.input-max-price {}
 
 .price-input__min {
     border-radius: 4px 0 0 4px;
@@ -223,8 +201,6 @@ input[type="number"]:focus {
     padding-left: 70px;
 }
 
-.search-result__select-wrap {}
-
 .search-result__top-bar select {
     padding: 14px 20px;
     height: 49px;
@@ -243,12 +219,6 @@ input[type="number"]:focus {
 .view-type__buton {
     background: none;
 }
-
-.kanban {}
-
-.single {}
-
-.list {}
 
 .search-result-hotels {
     display: grid;
@@ -291,10 +261,6 @@ input[type="number"]:focus {
     justify-content: space-between;
 }
 
-.hotel-card__state-type {}
-
-.hotel-card__price {}
-
 .hotel-card__buttons {
     display: flex;
     justify-content: space-between;
@@ -331,8 +297,6 @@ input[type="number"]:focus {
     align-items: center;
 }
 
-.rating-stars {}
-
 .rating-count {
     border-radius: 4px;
     color: #333333;
@@ -350,10 +314,6 @@ input[type="number"]:focus {
     line-height: 20px;
     white-space: nowrap;
     text-transform: uppercase;
-}
-
-.hotel-card__button span {
-    /* padding: 12px 30px; */
 }
 
 .result-pagination {

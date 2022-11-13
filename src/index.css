@@ -175,7 +175,6 @@ body {
     font-weight: 700;
 }
 
-.city-features__desc-caption {}
 
 .city-features {
     margin-top: 90px;
@@ -355,8 +354,6 @@ body {
     color: #FFFFFF;
 }
 
-.page-footer {}
-
 .page-footer-bottom {
     width: 100%;
     display: flex;
@@ -370,12 +367,6 @@ body {
     column-gap: 26px;
 }
 
-.nav-item__vk {}
-
-.nav-item__telegram {}
-
-.nav-item__youtube {}
-
 .page-footer__phone {
     font-weight: 400;
     font-size: 40px;
@@ -386,8 +377,6 @@ body {
     text-decoration: none;
     color: #000000;
 }
-
-.page-footer__link {}
 
 
 /* модальное окно */
@@ -538,8 +527,6 @@ input[id=adults] {
     margin-right: 10px;
 }
 
-.short {}
-
 .label__hint {
     background-color: #83B3D3;
     border-radius: 50%;
@@ -602,10 +589,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 input[type='number'] {
     -moz-appearance: textfield;
+    appearance: none;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
