@@ -40,7 +40,8 @@
     padding-bottom: 70px;
     /* width: 100%; */
     color: #ffffff;
-    background-image: url(/src/img/hotels-background.jpg);
+    background-image: url(img/hotels-background.jpg);
+    background-color: #5d7da56b;
 }
 
 .hotel-search__caption {
@@ -60,13 +61,39 @@
     display: flex;
     column-gap: 10.5px;
     margin-bottom: 40px;
+    align-items: center;
+}
+
+.hotel-search__nav-item {
+    background-repeat: no-repeat;
+}
+
+.hotel-search__nav-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hotel-search__nav-item.state-icon{
+    background-image: url(img/icon-home.svg);
+    width: 12px;
+    height: 12px;
+}
+
+.hotel-search__nav-item.decor-icon{
+    background-image: url(img/arrow-forward.svg);
+    width: 8px;
+    height: 11px;
 }
 
 .hotel-search__settings {
     display: flex;
 }
 
-.hotel-search__features-list {
+.hotel-search__features-list , .hotel-search__type-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
     padding: 0;
     margin: 0;
     font-size: 18px;
@@ -218,7 +245,27 @@ input[type="number"]:focus {
 
 .view-type__buton {
     background: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
 }
+
+.view-type__buton:focus {
+    outline: 2px solid #000000;
+    outline-offset: -2px;
+    box-shadow: none;
+}
+
+.view-type__buton.kanban {
+    background-image: url(img/icon-kanban.svg);
+}
+.view-type__buton.single {
+    background-image: url(img/icon-singleview.svg);
+}
+.view-type__buton.list {
+    background-image: url(img/icon-list.svg);
+}
+
 
 .search-result-hotels {
     display: grid;
@@ -230,7 +277,7 @@ input[type="number"]:focus {
 
 .hotel-card {
     /* width: 340px; */
-    height: 438px;
+    /* height: 438px; */
     padding: 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
@@ -314,6 +361,18 @@ input[type="number"]:focus {
     line-height: 20px;
     white-space: nowrap;
     text-transform: uppercase;
+    margin: 0;
+}
+
+.rating-stars {
+    display: flex;
+    column-gap: 6px;
+}
+
+.rating-star {
+    width: 18px;
+    height: 17px;
+    background-image: url(img/star.svg);
 }
 
 .result-pagination {
@@ -338,12 +397,166 @@ input[type="number"]:focus {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
 }
 
 .pagination-item.current{
     background-color: #F2F2F2;
 }
 
-.pagintion-hidden {
+.pagination-item.current .pagination-item__link{
+    color: #000000;
+}
+
+.pagination-item .pagination-item__link{
+    color: #ffffff;
+}
+
+.pagination-hidden {
     background: none;
+    color: #000000;
+}
+
+.pagination-item__link {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* !!!!!!!!!!!!!!!! спёрто и отредактировано с https://itchief.ru/examples/lab.php?topic=html-and-css&file=styling-checkbox-and-radio-1 */
+
+
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: #ffffff;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #acacac;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active + label::before {
+    background-color: #b3d7ff;
+    border-color: #ffffff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus + label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked) + label::before {
+    border-color: #ffffff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox:checked + label::before {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    background-image: url(img/checkmark.svg);
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled + label::before {
+    background-color: #e9ecef;
+}
+
+/* для элемента input c type="radio" */
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio + label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65% 55%;
+}
+
+/* стили при наведении курсора на радио */
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #b3d7ff;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active + label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.custom-radio:focus + label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom-radio:focus:not(:checked) + label::before {
+    border-color: #80bdff;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked + label::before {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    background-image: url(img/circle.svg);
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled + label::before {
+    background-color: #e9ecef;
 }
