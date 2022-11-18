@@ -2,16 +2,18 @@
 <html lang="ru">
 
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>HTML Academy: Седона</title>
-        <link rel="stylesheet" href="src/index.css">
+        <link rel="stylesheet" href="src/index.css" />
+        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" type="image/png" href="src/img/favicon.png" />
     </head>
 
     <body class="page-body">
         <header class="page-header">
             <div class="page-header__logo">
                 <a class="logo-link" aria-label="Лого Седона" href="index.html">
-                    <img src="src/img/center-logo-sedona.svg" alt="Sedona Logo">
+                    <img src="src/img/center-logo-sedona.svg" alt="Sedona Logo" />
                 </a>
             </div>
             <nav class="navigation">
@@ -22,7 +24,7 @@
                     <li class="navigation-item">
                         <a href="#">O Седоне</a>
                     </li>
-                    <li class="navigation-item">
+                    <li class="navigation-item current">
                         <a href="catalog.html">Гостиницы</a>
                     </li>
                 </ul>
@@ -37,79 +39,86 @@
                         </a>
                     </li>
                     <li class="navigation-item button">
-                        <a href="#">
-                            <button type="button" class="button">
-                                Хочу сюда!
-                            </button>
-                        </a>
+                        <button type="button" class="button">
+                            Хочу сюда!
+                        </button>
                     </li>
                 </ul>
             </nav>
         </header>
         <main class="page-main">
             <section class="page-main__hotel-search">
-                <h1 class="text-content hotel-search__caption">Гостиницы Седоны</h1>
+                <h1 class="text-content hotel-search__caption">
+                    Гостиницы Седоны
+                </h1>
                 <div class="hotel-search__nav">
                     <div class="hotel-search__nav-item state-icon">
                         <a aria-label="Главная" href="/index.html"></a>
                     </div>
-                    <div class="hotel-search__nav-item decor-icon"></div>
-                    <div class="hotel-search__nav-item">Гостиницы</div>
+                    <div class="hotel-search__nav-item">
+                        <a href="catalog.html">Гостиницы</a>
+                    </div>
                 </div>
                 <form class="hotel-search__settings" id="hotel_searh-form" action="https://echo.htmlacademy.ru"
                     method="get">
                     <div class="hotel-search__features">
-                        <h2 class="text-content hotel-search__block-caption">Инфраструктура</h2>
+                        <h2 class="text-content hotel-search__block-caption">
+                            Инфраструктура
+                        </h2>
                         <div class="hotel-search__features-list">
                             <div class="hotel-search__feature-item">
                                 <input id="pool" type="checkbox" name="pool" value="pool"
-                                    class="input feature-item__input custom-checkbox" checked>
+                                    class="input feature-item__input custom-checkbox" checked />
                                 <label class="feature-item__label" for="pool">Бассейн</label>
                             </div>
                             <div class="hotel-search__feature-item">
                                 <input id="parking" type="checkbox" name="parking" value="parking"
-                                    class="input feature-item__input custom-checkbox" checked>
+                                    class="input feature-item__input custom-checkbox" checked />
                                 <label class="feature-item__label" for="parking">Парковка</label>
                             </div>
                             <div class="hotel-search__feature-item">
                                 <input id="wifi" type="checkbox" name="wifi" value="wifi"
-                                    class="input feature-item__input custom-checkbox">
+                                    class="input feature-item__input custom-checkbox" />
                                 <label class="feature-item__label" for="wifi">Wi-Fi</label>
                             </div>
                         </div>
                     </div>
                     <div class="hotel-search__state-type">
-                        <h2 class="text-content hotel-search__block-caption">Тип жилья</h2>
+                        <h2 class="text-content hotel-search__block-caption">
+                            Тип жилья
+                        </h2>
                         <div class="hotel-search__type-list">
                             <div class="hotel-search__type-item">
                                 <input id="hotel" type="radio" name="state" value="1"
-                                    class="input type-item__input custom-radio">
+                                    class="input type-item__input custom-radio" />
                                 <label class="type-item__label" for="hotel">Гостиница</label>
                             </div>
                             <div class="hotel-search__type-item">
                                 <input id="motel" type="radio" name="state" value="2"
-                                    class="input type-item__input custom-radio">
+                                    class="input type-item__input custom-radio" />
                                 <label class="type-item__label" for="motel">Мотель</label>
                             </div>
                             <div class="hotel-search__type-item">
                                 <input id="aparts" type="radio" name="state" value="3"
-                                    class="input type-item__input custom-radio">
+                                    class="input type-item__input custom-radio" />
                                 <label class="type-item__label" for="aparts">Апартаменты</label>
                             </div>
                         </div>
                     </div>
                     <div class="hotel-search__price">
-                        <h2 class="text-content hotel-search__block-caption">Стоимость, ₽:</h2>
+                        <h2 class="text-content hotel-search__block-caption">
+                            Стоимость, ₽:
+                        </h2>
                         <div class="price-inputs">
                             <div class="price-input__wrap">
                                 <label for="min-price" class="input-min-price">от</label>
                                 <input class="input price-input price-input__min" type="number" name="min-price"
-                                    id="min-price" value="0" min="0">
+                                    id="min-price" value="0" min="0" />
                             </div>
                             <div class="price-input__wrap">
                                 <label for="max-price" class="input-max-price">до</label>
                                 <input class="input price-input price-input__max" type="number" name="max-price"
-                                    id="max-price" value="9000">
+                                    id="max-price" value="9000" />
                             </div>
                         </div>
                         <div class="hotel-search__range-scale">
@@ -124,14 +133,20 @@
                         </div>
                     </div>
                     <div class="form-buttons">
-                        <button class="button form-button" type="submit">Применить</button>
-                        <button class="button form-button clear-button" type="reset">Сбросить</button>
+                        <button class="button form-button" type="submit">
+                            Применить
+                        </button>
+                        <button class="button form-button clear-button" type="reset">
+                            Сбросить
+                        </button>
                     </div>
                 </form>
             </section>
             <section class="hotel-search__result">
                 <div class="search-result__top-bar">
-                    <p class="text-content search-result__hotels-count">Найдено гостиниц: 38</p>
+                    <p class="text-content search-result__hotels-count">
+                        Найдено гостиниц: 38
+                    </p>
                     <div class="search-result__select-wrap">
                         <select name="order-select" id="order-select">
                             <option value="cheapest">Сначала дешевые</option>
@@ -141,7 +156,8 @@
                                 <span class="visually-hidden">Переключить на вид Канбан</span>
                             </button>
                             <button aria-label="Продукт" class="button view-type__buton single">
-                                <span class="visually-hidden">Переключить на вид Единичный экземпляр</span>
+                                <span class="visually-hidden">Переключить на вид Единичный
+                                    экземпляр</span>
                             </button>
                             <button aria-label="Список" class="button view-type__buton list checked">
                                 <span class="visually-hidden">Переключить на вид Список</span>
@@ -152,13 +168,19 @@
                 <div class="search-result-hotels">
                     <div class="hotel-card">
                         <div class="hotel-card-image">
-                            <img src="src/img/hotel-1.jpg" alt="Отель Amara Resort & Spa">
+                            <img src="src/img/hotel-1.jpg" alt="Отель Amara Resort & Spa" />
                         </div>
-                        <h2 class="text-content hotel-card__hotel-name">Amara Resort & Spa</h2>
+                        <h2 class="text-content hotel-card__hotel-name">
+                            Amara Resort & Spa
+                        </h2>
                         <div class="hotel-card__info">
                             <div class="hotel-card__main">
-                                <p class="text-content hotel-card__state-type">Гостиница</p>
-                                <p class="text-content hotel-card__price">От 4000 ₽</p>
+                                <p class="text-content hotel-card__state-type">
+                                    Гостиница
+                                </p>
+                                <p class="text-content hotel-card__price">
+                                    От 4000 ₽
+                                </p>
                             </div>
                             <div class="hotel-card__buttons">
                                 <button type="button" class="button hotel-card__button more-info">
@@ -177,18 +199,23 @@
                                 </div>
                                 <p class="rating-count">Рейтинг: 8,5</p>
                             </div>
-
                         </div>
                     </div>
                     <div class="hotel-card">
                         <div class="hotel-card-image">
-                            <img src="src/img/hotel-2.jpg" alt="Отель Villas at Poco Diablo">
+                            <img src="src/img/hotel-2.jpg" alt="Отель Villas at Poco Diablo" />
                         </div>
-                        <h2 class="text-content hotel-card__hotel-name">Villas at Poco Diablo</h2>
+                        <h2 class="text-content hotel-card__hotel-name">
+                            Villas at Poco Diablo
+                        </h2>
                         <div class="hotel-card__info">
                             <div class="hotel-card__main">
-                                <p class="text-content hotel-card__state-type">Гостиница</p>
-                                <p class="text-content hotel-card__price">От 5000 ₽</p>
+                                <p class="text-content hotel-card__state-type">
+                                    Гостиница
+                                </p>
+                                <p class="text-content hotel-card__price">
+                                    От 5000 ₽
+                                </p>
                             </div>
                             <div class="hotel-card__buttons">
                                 <button type="button" class="button hotel-card__button more-info">
@@ -205,20 +232,27 @@
                                     <div class="rating-star"></div>
                                     <div class="rating-star"></div>
                                 </div>
-                                <p class="text-content rating-count">Рейтинг: 9,2</p>
+                                <p class="text-content rating-count">
+                                    Рейтинг: 9,2
+                                </p>
                             </div>
-
                         </div>
                     </div>
                     <div class="hotel-card">
                         <div class="hotel-card-image">
-                            <img src="src/img/hotel-3.jpg" alt="Отель Desert Quail Inn">
+                            <img src="src/img/hotel-3.jpg" alt="Отель Desert Quail Inn" />
                         </div>
-                        <h2 class="text-content hotel-card__hotel-name">Desert Quail Inn</h2>
+                        <h2 class="text-content hotel-card__hotel-name">
+                            Desert Quail Inn
+                        </h2>
                         <div class="hotel-card__info">
                             <div class="hotel-card__main">
-                                <p class="text-content hotel-card__state-type">Гостиница</p>
-                                <p class="text-content hotel-card__price">От 2500 ₽</p>
+                                <p class="text-content hotel-card__state-type">
+                                    Гостиница
+                                </p>
+                                <p class="text-content hotel-card__price">
+                                    От 2500 ₽
+                                </p>
                             </div>
                             <div class="hotel-card__buttons">
                                 <button type="button" class="button hotel-card__button more-info">
@@ -234,20 +268,27 @@
                                     <div class="rating-star"></div>
                                     <div class="rating-star"></div>
                                 </div>
-                                <p class="text-content rating-count">Рейтинг: 6,9</p>
+                                <p class="text-content rating-count">
+                                    Рейтинг: 6,9
+                                </p>
                             </div>
-
                         </div>
                     </div>
                     <div class="hotel-card">
                         <div class="hotel-card-image">
-                            <img src="src/img/hotel-4.jpg" alt="Отель GreenTree Inn">
+                            <img src="src/img/hotel-4.jpg" alt="Отель GreenTree Inn" />
                         </div>
-                        <h2 class="text-content hotel-card__hotel-name">GreenTree Inn</h2>
+                        <h2 class="text-content hotel-card__hotel-name">
+                            GreenTree Inn
+                        </h2>
                         <div class="hotel-card__info">
                             <div class="hotel-card__main">
-                                <p class="text-content hotel-card__state-type">Гостиница</p>
-                                <p class="text-content hotel-card__price">От 1500 ₽</p>
+                                <p class="text-content hotel-card__state-type">
+                                    Гостиница
+                                </p>
+                                <p class="text-content hotel-card__price">
+                                    От 1500 ₽
+                                </p>
                             </div>
                             <div class="hotel-card__buttons">
                                 <button type="button" class="button hotel-card__button more-info">
@@ -262,9 +303,10 @@
                                     <div class="rating-star"></div>
                                     <div class="rating-star"></div>
                                 </div>
-                                <p class="text-content rating-count">Рейтинг: 5,0</p>
+                                <p class="text-content rating-count">
+                                    Рейтинг: 5,0
+                                </p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -292,12 +334,16 @@
         </main>
         <footer class="page-footer">
             <div class="info-block__mailing-wrap noimage">
-                <h2 class="text-content info-block__mailing-caption">Подпишитесь на рассылку</h2>
-                <p class="text-content info-block__mailing-text">Только полезная информация и никакого спама,<br>честное
-                    бойскаутское!</p>
+                <h2 class="text-content info-block__mailing-caption">
+                    Подпишитесь на рассылку
+                </h2>
+                <p class="text-content info-block__mailing-text">
+                    Только полезная информация и никакого спама,<br />честное
+                    бойскаутское!
+                </p>
                 <form action="https://echo.htmlacademy.ru" method="post" class="info-block__form">
                     <input class="input info-block__input" type="email" id="mail-input" placeholder="Ваш e-mail"
-                        required>
+                        required />
                     <button type="submit" class="button info-block__form-button">
                         <span>Подписаться</span>
                     </button>
@@ -320,7 +366,7 @@
                 <a aria-label="Телефон Академии" class="page-footer__phone" href="tel:+78128121212">+7 (812)
                     812-12-12</a>
                 <a aria-label="Ссылка на Академию" class="page-footer__link" href="https://htmlacademy.ru/">
-                    <img src="src/img/htmlacademy-site.svg" alt="Стилизованная ссылка">
+                    <img src="src/img/htmlacademy-site.svg" alt="Стилизованная ссылка" />
                 </a>
             </div>
         </footer>
@@ -341,7 +387,6 @@
                                 </div>
                                 <input class="input" type="date" name="arrival-date" id="arrival-date"
                                     value="2020-04-27" required />
-                                <div class="calendar-icon"></div>
                             </div>
                             <p class="input-hint warning">
                                 Мы не можем отправить вас в прошлое.
@@ -354,7 +399,6 @@
                                 </div>
                                 <input class="input" type="date" name="departure-date" id="departure-date"
                                     value="2023-09-01" />
-                                <div class="calendar-icon"></div>
                             </div>
                             <p class="text-content input-hint">
                                 На эти даты есть свободные номера. Пока есть.
@@ -378,7 +422,6 @@
                                     <label class="input-label with-hint" for="kids">Дети:</label>
                                     <div class="label__hint">
                                         i
-                                        <div class="label__hint-arrow"></div>
                                         <div class="label__hint-content">
                                             Укажите количество детей, которые
                                             будут с вами, возраст которых от 6
