@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="navigation-item button">
-                        <button type="button" class="button">
+                        <button type="button" class="button button-brown">
                             Хочу сюда!
                         </button>
                     </li>
@@ -75,7 +75,7 @@
                             </p>
                         </div>
                         <div class="city-feature__picture">
-                            <img src="src/img/real-city.jpg" width="800" height="400" alt="Седона - настоящий город" />
+                            <img src="src/img/real-city.jpg" width="800" height="384" alt="Седона - настоящий город" />
                         </div>
                     </div>
                     <div class="city-features-wrap city-feature__picture-without">
@@ -106,7 +106,7 @@
                     </div>
                     <div class="city-features-wrap city-feature__picture-plus pic-left">
                         <div class="city-feature__picture">
-                            <img src="src/img/devil-bridge.jpg" width="800" height="400" alt="Мост дьявола в Седоне" />
+                            <img src="src/img/devil-bridge.jpg" width="800" height="384" alt="Мост дьявола в Седоне" />
                         </div>
                         <div class="city-feature ocean-blue">
                             <h2 class="text-content city-feature__title">
@@ -156,7 +156,7 @@
                         Укажите предполагаемые даты поездки,<br />и мы покажем
                         вам лучшие предложения гостиниц в Седоне
                     </p>
-                    <button type="button" class="button info-block__hotel-seach-button">
+                    <button type="button" class="button info-block__hotel-seach-button button-brown">
                         <span class="info-block__button-text">Поиск гостиницы в Седоне</span>
                     </button>
                 </div>
@@ -174,7 +174,7 @@
                 <form action="https://echo.htmlacademy.ru" method="post" class="info-block__form">
                     <input class="input info-block__input" type="email" id="mail-input" placeholder="Ваш e-mail"
                         required />
-                    <button type="submit" class="button info-block__form-button">
+                    <button type="submit" class="button info-block__form-button button-blue">
                         <span>Подписаться</span>
                     </button>
                 </form>
@@ -215,8 +215,10 @@
                                 <div class="label-wrap">
                                     <label class="input-label" for="arrival-date">Дата заезда:</label>
                                 </div>
-                                <input class="input" type="date" name="arrival-date" id="arrival-date"
-                                    value="2020-04-27" required />
+                                <div class="input-date__wrap">
+                                    <input class="input input-date" type="text" name="arrival-date" id="arrival-date"
+                                        value="27 апреля 2020" required />
+                                </div>
                             </div>
                             <p class="input-hint warning">
                                 Мы не можем отправить вас в прошлое.
@@ -227,8 +229,10 @@
                                 <div class="label-wrap">
                                     <label class="input-label" for="departure-date">Дата выезда:</label>
                                 </div>
-                                <input class="input" type="date" name="departure-date" id="departure-date"
-                                    value="2023-09-01" />
+                                <div class="input-date__wrap">
+                                    <input class="input input-date" type="text" name="departure-date" id="departure-date"
+                                    value="1 сентября 2023" />
+                                </div>
                             </div>
                             <p class="text-content input-hint">
                                 На эти даты есть свободные номера. Пока есть.
@@ -239,16 +243,16 @@
                                 <div class="label-wrap">
                                     <label class="input-label" for="adults">Взрослые:</label>
                                 </div>
+                                <input class="input" type="number" name="adults" id="adults" value="2" required />
                                 <button type="button" class="button math-sign minus">
                                     <span class="visually-hidden">Кнопка уменьшения количества взрослых.</span>
                                 </button>
-                                <input class="input" type="number" name="adults" id="adults" value="2" required />
                                 <button type="button" class="button math-sign plus">
                                     <span class="visually-hidden">Кнопка увеличения количества взрослых.</span>
                                 </button>
                             </div>
                             <div class="input-wrapper short">
-                                <div class="label-wrap">
+                                <div class="label-wrap info">
                                     <label class="input-label with-hint" for="kids">Дети:</label>
                                     <div class="label__hint">
                                         i
@@ -261,10 +265,10 @@
                                     </div>
                                 </div>
                                 <div class="num-input-container">
+                                    <input class="input" type="number" name="kids" id="kids" value="2" />
                                     <button type="button" class="button math-sign minus">
                                         <span class="visually-hidden">Кнопка уменьшения количества детей.</span>
                                     </button>
-                                    <input class="input" type="number" name="kids" id="kids" value="2" />
                                     <button type="button" class="button math-sign plus">
                                         <span class="visually-hidden">Кнопка увеличения количества детей.</span>
                                     </button>
