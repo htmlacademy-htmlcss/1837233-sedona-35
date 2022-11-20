@@ -697,6 +697,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.2;
+    background-color: unset;
 }
 
 .input-wrapper.short input:hover ~ .math-sign {
